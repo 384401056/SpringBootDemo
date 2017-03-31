@@ -12,9 +12,9 @@ public class Main {
         DemoAnnotationServer demoAnnotationServer = context.getBean(DemoAnnotationServer.class);
         DemoMethodServer demoMethodServer = context.getBean(DemoMethodServer.class);
         demoAnnotationServer.add();
+        demoAnnotationServer.delete();
         demoMethodServer.add();
+        demoMethodServer.delete();
         context.close();
-
     }
-
 }

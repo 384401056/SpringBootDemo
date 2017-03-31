@@ -10,4 +10,8 @@ public class DemoMethodServer {
     public void add(){
         System.out.println("DemoMethodServer Add...");
     }
+
+    public void delete(){
+        System.out.println("DemoMethodServer delete...");
+    }
 }

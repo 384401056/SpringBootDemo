@@ -9,7 +9,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 
 @Configuration //相当于把该类作为spring的xml配置文件中的<beans>
-@ComponentScan("com.blueice.aop")
+@ComponentScan("com.blueice.aop")//扫描的包名
 @EnableAspectJAutoProxy //开启Spring对AspectJ的支持
 public class AopConfig {
+
 }

@@ -7,8 +7,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DemoAnnotationServer {
-    @Action(name =  "注解拦截的操作")
+    @Action(name =  "注解拦截的操作Add")
     public void add(){
         System.out.println("DemoAnnotaionServer Add...");
+    }
+
+    @Action(name =  "注解拦截的操作delete")
+    public void delete(){
+        System.out.println("DemoAnnotaionServer delete...");
     }
 }
