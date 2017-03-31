@@ -19,7 +19,7 @@ import java.nio.charset.Charset;
  */
 @Configuration
 @ComponentScan("com.blueice.springel")
-@PropertySource("classpath:com/blueice/springel/test.properties") //注入的
+@PropertySource("classpath:test.properties") //注入的
 public class ElConfig {
 
     @Value("I Love You") //注入普通字符.
@@ -34,7 +34,7 @@ public class ElConfig {
     @Value("#{demoServer.another}") //注入其它Bean属性.
     private String fromAnother;
 
-    @Value("classpath:com/blueice/springel/test.txt") //注入文件资源.
+    @Value("classpath:test.txt") //注入文件资源.
     private Resource testFile;
 
     @Value("http://www.baidu.com")
