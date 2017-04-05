@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpringProFile.iml" filepath="$PROJECT_DIR$/SpringProFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SprintApplicationEvent.iml" filepath="$PROJECT_DIR$/SprintApplicationEvent.iml" />
     </modules>
   </component>
 </project>
