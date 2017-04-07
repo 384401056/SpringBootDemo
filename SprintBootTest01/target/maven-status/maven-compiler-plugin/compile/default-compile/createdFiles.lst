@@ -1,0 +1,3 @@
+com\blueice\Application.class
+com\blueice\bean\User.class
+com\blueice\controller\IndexController.class
