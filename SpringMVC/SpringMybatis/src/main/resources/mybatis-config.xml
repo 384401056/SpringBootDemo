@@ -2,9 +2,11 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <!--环境配置，即连接的数据库-->
     <environments default="mysql">
         <environment id = "mysql">
+
             <!--指定事务管理类型-->
             <transactionManager type="JDBC"/>
 

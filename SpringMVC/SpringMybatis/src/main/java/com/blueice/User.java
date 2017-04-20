@@ -1,14 +1,18 @@
-package com.blueice.sprintmybatis;
+package com.blueice;
 
 /**
  * Created by Administrator on 2017/4/20.
  */
-public class User {
+public class User{
 
     private int id;
     private String name;
     private String sex;
     private int age;
+
+    public User(){
+
+    }
 
     public User(String name, String sex, int age) {
         this.name = name;
