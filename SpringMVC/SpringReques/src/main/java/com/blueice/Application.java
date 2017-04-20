@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * Created by Administrator on 2017/3/15.
@@ -12,7 +13,7 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 @SpringBootApplication
 public class Application implements EmbeddedServletContainerCustomizer {
     public static void main(String[] args){
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Override

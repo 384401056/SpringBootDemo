@@ -1,5 +1,7 @@
 package com.blueice;
 
+import java.util.Date;
+
 /**
  * Created by Administrator on 2017/4/17.
  */
@@ -8,6 +10,7 @@ public class User {
     private String loginName;
     private String password;
     private String userName;
+    private Date birthday;
 
     public String getLoginName() {
         return loginName;
@@ -31,5 +34,13 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 }
