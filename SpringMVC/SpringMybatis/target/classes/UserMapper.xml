@@ -10,4 +10,19 @@
     <select id="select" parameterType="int" resultType="com.blueice.User">
         SELECT * FROM tb_user WHERE id = #{id}
     </select>
+
+    <!-- 删除用户(Remove) -->
+    <delete id="delete" parameterType="int">
+    delete from tb_user where id=#{id}
+    </delete>
+
+    <!-- 修改用户(Update) -->
+    <update id="update" parameterType="com.blueice.User">
+    update tb_user set name=#{name},sex=#{sex},age=#{age} where id=#{id}
+    </update>
+    <!-- 查询全部用户-->
+    <select id="getAll" resultType="com.blueice.User">
+    select * from tb_user
+    </select>
+
 </mapper>
