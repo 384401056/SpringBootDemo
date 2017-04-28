@@ -1,6 +1,7 @@
 package com.blueice.sprintmybatis;
 
-import com.blueice.User;
+import com.blueice.MyBatisUtils;
+import com.blueice.bean.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

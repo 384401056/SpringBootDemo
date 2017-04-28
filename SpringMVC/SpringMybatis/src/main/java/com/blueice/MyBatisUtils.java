@@ -1,4 +1,4 @@
-package com.blueice.sprintmybatis;
+package com.blueice;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

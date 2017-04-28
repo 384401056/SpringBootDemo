@@ -1,23 +1,25 @@
-package com.blueice;
+package com.blueice.bean;
 
 /**
- * Created by Administrator on 2017/4/20.
+ * Created by Administrator on 2017/4/21.
  */
-public class User{
-
+public class Person {
     private int id;
     private String name;
     private String sex;
     private int age;
+    //person和card的一对一关系
+    private Card card;
 
-    public User(){
-
+    public Person() {
     }
 
-    public User(String name, String sex, int age) {
+    public Person(int id, String name, String sex, int age, Card card) {
+        this.id = id;
         this.name = name;
         this.sex = sex;
         this.age = age;
+        this.card = card;
     }
 
     public int getId() {
@@ -50,5 +52,13 @@ public class User{
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 }

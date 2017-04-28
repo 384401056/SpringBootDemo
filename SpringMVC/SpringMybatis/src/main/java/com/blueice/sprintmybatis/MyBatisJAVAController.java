@@ -1,6 +1,7 @@
 package com.blueice.sprintmybatis;
 
-import com.blueice.User;
+import com.blueice.MyBatisUtils;
+import com.blueice.bean.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -79,7 +80,6 @@ public class MyBatisJAVAController {
             session = MyBatisUtils.getSqlSession();
             IUserMapper mapper = session.getMapper(IUserMapper.class);
             User user = mapper.getById(id);
-            session.commit();
             session.close();
             return user;
         } catch (IOException e) {
@@ -96,7 +96,6 @@ public class MyBatisJAVAController {
             session = MyBatisUtils.getSqlSession();
             IUserMapper mapper = session.getMapper(IUserMapper.class);
             List<User> userList = mapper.getAll();
-            session.commit();
             session.close();
             return userList;
         } catch (IOException e) {
