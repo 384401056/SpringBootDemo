@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--开启二级缓存,此时查询结果映射的java对象必须实现java.io.Serializable接口-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <!--<setting name="logImpl" value="LOG4J" />-->
+    </settings>
+    <!--&lt;!&ndash;环境配置，即连接的数据库&ndash;&gt;-->
+    <environments default="mysql">
+        <environment id = "mysql">
+            <!--指定事务管理类型-->
+            <transactionManager type="JDBC"/>
+
+            <!--数据源配置，POOLED是JDB连接对象的数据源连接池的实现-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <!--serverTimezone=UTC  使用最新的连接驱动时要设置时区-->
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/hrm?serverTimezone=UTC"/>
+
+                <!--使用log4j来打印sql语句-->
+                <!--<property name="driver" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>-->
+                <!--<property name="url" value="jdbc:log4jdbc:mysql://127.0.0.1:3306/hrm?serverTimezone=UTC"/>-->
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+
+            <!--<dataSource type="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+                <!--<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>-->
+                <!--&lt;!&ndash;?serverTimezone=UTC  使用最新的连接驱动时要设置时区&ndash;&gt;-->
+                <!--<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/hrm?serverTimezone=UTC"/>-->
+
+                <!--&lt;!&ndash;使用log4j来打印sql语句&ndash;&gt;-->
+                <!--&lt;!&ndash;<property name="driver" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<property name="url" value="jdbc:log4jdbc:mysql://127.0.0.1:3306/hrm?serverTimezone=UTC"/>&ndash;&gt;-->
+                <!--<property name="username" value="root"/>-->
+                <!--<property name="password" value="123456"/>-->
+                <!--<property name="idleConnectionTestPeriod" value="60" />-->
+                <!--<property name="maxPoolSize" value="20" />-->
+                <!--<property name="maxIdleTime" value="600" />-->
+            <!--</dataSource>-->
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper class="com.blueice.hrm.dao.UserDao"/>
+    </mappers>
+
+</configuration>
