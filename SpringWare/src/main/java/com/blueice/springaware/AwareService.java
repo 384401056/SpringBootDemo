@@ -15,11 +15,9 @@ public class AwareService implements BeanNameAware,ResourceLoaderAware {
 
     private String beanName;
     private ResourceLoader loader;
-
     public String getBeanName() {
         return beanName;
     }
-
 
     @Override
     public void setResourceLoader(ResourceLoader resourceLoader) {
@@ -31,14 +29,11 @@ public class AwareService implements BeanNameAware,ResourceLoaderAware {
         this.beanName = beanName;
     }
 
-
     public void outputResult(){
         System.out.println("Bean的名称为："+ beanName);
         Resource resource = this.loader.getResource("classpath:test.txt");
         try {
-
             System.out.println("Resource加载的内容是:"+ IOUtils.toString(resource.getInputStream()));
-
         }catch (Exception ex){
             ex.printStackTrace();
         }

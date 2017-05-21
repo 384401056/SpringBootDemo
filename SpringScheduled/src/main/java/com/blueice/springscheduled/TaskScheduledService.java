@@ -18,9 +18,9 @@ public class TaskScheduledService {
         System.out.println("每隔5秒执行一次"+ dateFormat.format(new Date()));
     }
 
-    @Scheduled(cron = "0 30 15 ? * *") //代表定时执行,每天的15点30分
-    public void fixTimeExecution(){
-        System.out.println("在指定时间执行。"+dateFormat.format(new Date()));
-    }
+//    @Scheduled(cron = "0 0 14 * * ? ") //代表定时执行,每天的15点30分
+//    public void fixTimeExecution(){
+//        System.out.println("在指定时间执行。"+dateFormat.format(new Date()));
+//    }
 
 }
