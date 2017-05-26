@@ -1,17 +1,14 @@
 package com.blueice.hrm.controller;
 
-import com.blueice.hrm.dao.UserDao;
 import com.blueice.hrm.domain.User;
 import com.blueice.hrm.service.HrmService;
 import com.blueice.hrm.service.impl.HrmServiceImpl;
-import com.blueice.hrm.utils.MyBatisUtils;
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.List;
 
 /**
