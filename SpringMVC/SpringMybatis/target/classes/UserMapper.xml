@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserMapper">
+
+    <!--开启当前mapper的二级缓存 flushInterval刷新时间,size缓存数目,readOnly只读的缓存会给所有调用者返回缓存对象的相同实例-->
+    <cache eviction="LRU" flushInterval="60000" size="1024" readOnly="true"/>
+
+    <insert id="save" parameterType="com.blueice.bean.User">
+        insert into tb_user(name,sex,age) values(#{name},#{sex},#{age})
+    </insert>
+
+    <!--根据id查询得到一个user对象-->
+    <select id="select" parameterType="int" resultType="com.blueice.bean.User">
+        SELECT * FROM tb_user WHERE id = #{id}
+    </select>
+
+    <!-- 删除用户(Remove) -->
+    <delete id="delete" parameterType="int">
+    delete from tb_user where id=#{id}
+    </delete>
+
+    <!-- 修改用户(Update) -->
+    <update id="update" parameterType="com.blueice.bean.User">
+    update tb_user set name=#{name},sex=#{sex},age=#{age} where id=#{id}
+    </update>
+    <!-- 查询全部用户-->
+    <select id="getAll" resultType="com.blueice.bean.User">
+    select * from tb_user
+    </select>
+
+</mapper>
