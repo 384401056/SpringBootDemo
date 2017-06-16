@@ -26,5 +26,19 @@
             </div>
         </div>
     </div>
+
+<script th:inline="javascript">
+    var single = [[${singlePerson}]];
+    console.log(single.name+"/"+single.age);
+
+    function getName(name) {
+        console.log(name);
+    }
+
+</script>
+
+
+
+
 </body>
 </html>
