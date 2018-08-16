@@ -1,0 +1,26 @@
+spring:
+  data:
+    mongodb:
+      database: itcast
+      host: localhost
+      port: 27017
+      repositories:
+        enabled: true
+
+  datasource:
+      url : jdbc:mysql://localhost:3306/test
+      username : root
+      password : 12345
+      driverClassName : com.mysql.jdbc.Driver
+    jpa:
+      database : MYSQL
+      show-sql : true
+      hibernate:
+        ddl-auto : update
+        naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+      properties:
+        hibernate:
+          dialect : org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8899

@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  data:
+    mongodb:
+      host: localhost
+      database: itcast
+      port: 27017
+
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+
+server:
+  port: 8899
+
+
