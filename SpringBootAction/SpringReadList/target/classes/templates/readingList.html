@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">读者</div>
+        <div class="panel-body">
+            <span th:text="${name}"></span>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">访问列表</div>
+        <div class="panel-body" th:unless="${#lists.isEmpty(books)}">
+            <ul class="list-group">
+                <li class="list-group-item" th:each="book:${books}">
+                    <span>Title：</span><span th:text="${book.title}"></span>
+                    <span>Author：</span><span th:text="${book.author}"></span>
+                    <span>ISBN：</span><span th:text="${book.isbn}"></span>
+                    <button type="button" class="btn btn-warning" th:onclick="'getName(\''+${person.name} +'\');'">获得名字</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel-body" th:if="${#lists.isEmpty(books)}">
+            <span>You have no books in your book list!</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
